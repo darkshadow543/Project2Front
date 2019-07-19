@@ -5,7 +5,7 @@
     <tbody *ngFor="let user of users">
         <tr>
             <td>{{user.id}}</td>
-            <td>{{user.name}}</td>
+            <td>{{user.userName}}</td>
             <td>{{user.email}}</td>
             <td><button (click)= "view(user.id)" class="btn btn-primary">View</button></td>
         </tr>

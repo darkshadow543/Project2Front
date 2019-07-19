@@ -1,1 +1,14 @@
-<p>view-all-channels works!</p>
+<h3>All Channels</h3>
+
+<table border="1" class="table table-bordered">
+    <thead><tr><th>Channel Id</th><th>Owner Id</th><th>Channel Name</th></tr></thead>
+    <tbody *ngFor="let channel of channels">
+        <tr>
+            <td>{{channel.id}}</td>
+            <td>{{channel.owner}}</td>
+            <td>{{channel.name}}</td>
+            <!-- <td><button (click)= "view(user.id)" class="btn btn-primary">View</button></td> -->
+        </tr>
+
+    </tbody>
+</table>

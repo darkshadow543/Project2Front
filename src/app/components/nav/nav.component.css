@@ -1,9 +1,0 @@
-<nav class = "navbar navbar-expand navbar-dark bg-dark">
-    <div class = "nav navbar-nav">
-        <a class = "nav-item nav-link active" routerLink="">Home</a>
-        <div>
-        <a class="nav-item nav-link" routerLink="/login">Login</a>
-        <a class="nav-item nav-link" routerLink="/register">Register</a>
-        </div>
-    </div>
-</nav>

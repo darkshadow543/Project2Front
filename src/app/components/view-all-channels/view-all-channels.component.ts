@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ChannelService } from 'src/app/services/channel.service';
+import { Channel } from 'src/app/models/channel';
 
 @Component({
   selector: 'app-view-all-channels',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewAllChannelsComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private channelService: ChannelService, private router: Router) { }
 
   ngOnInit() {
+    this.list();
   }
+
+  channels: Channel[];
+
+  list() {
+    this.channelService.list().subscribe((res) => {
+      console.log(res);
+      this.channels = res;
+    });
+  }
+
+  // view(id:number){
+  //   this.router.navigate(['viewuser',id]);
+  // }
 
 }

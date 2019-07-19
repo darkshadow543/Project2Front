@@ -9,6 +9,16 @@ import { HeaderComponent } from './layouts/header/header.component';
 import { MainComponent } from './layouts/main/main.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterUserComponent } from './components/register-user/register-user.component';
+import { ListusersComponent } from './components/listusers/listusers.component';
+import { HomeComponent } from './components/home/home.component';
+import { ViewAllChannelsComponent } from './components/view-all-channels/view-all-channels.component';
+import { ViewerSpecificChannelComponent } from './components/viewer-specific-channel/viewer-specific-channel.component';
+import { OwnerSpecificChannelComponent } from './components/owner-specific-channel/owner-specific-channel.component';
+import { ViewerSpecificVideoComponent } from './components/viewer-specific-video/viewer-specific-video.component';
+import { OwnerSpecificVideoComponent } from './components/owner-specific-video/owner-specific-video.component';
+import { UploadVideoComponent } from './components/upload-video/upload-video.component';
+import { MakeChannelComponent } from './components/make-channel/make-channel.component';
+import { ViewUserComponent } from './components/view-user/view-user.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +26,17 @@ import { RegisterUserComponent } from './components/register-user/register-user.
     HeaderComponent,
     MainComponent,
     LoginComponent,
-    RegisterUserComponent
+    RegisterUserComponent,
+    ListusersComponent,
+    HomeComponent,
+    ViewAllChannelsComponent,
+    ViewerSpecificChannelComponent,
+    OwnerSpecificChannelComponent,
+    ViewerSpecificVideoComponent,
+    OwnerSpecificVideoComponent,
+    UploadVideoComponent,
+    MakeChannelComponent,
+    ViewUserComponent
   ],
   imports: [
     BrowserModule,

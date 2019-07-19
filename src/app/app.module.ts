@@ -28,7 +28,7 @@ import { ViewUserComponent } from './components/view-user/view-user.component';
     AppComponent,
     NavComponent,
     ChanOwnComponent,
-    ChanFormComponent
+    ChanFormComponent,
     HeaderComponent,
     MainComponent,
     LoginComponent,

@@ -26,8 +26,8 @@ export class ViewAllChannelsComponent implements OnInit {
     });
   }
 
-  // view(id:number){
-  //   this.router.navigate(['viewuser',id]);
-  // }
+  subscribe(id:number){
+
+  }
 
 }

@@ -13,6 +13,7 @@ const routes: Routes = [
   {path:'listusers', component:ListusersComponent},
   {path:'viewuser/:id', component:ViewUserComponent},
   {path:'view-all-channels', component:ViewAllChannelsComponent},
+  {path:'logout', component:LoginComponent},
   {path:'', redirectTo: 'login', pathMatch: 'full'}
 ];
 

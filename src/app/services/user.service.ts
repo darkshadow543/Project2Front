@@ -7,6 +7,8 @@ import { User } from '../models/user';
 })
 export class UserService {
 
+  isLogged:boolean = false;
+
   serverUrl = "http://localhost:8090/"
 
   constructor(private http: HttpClient) { }
@@ -30,6 +32,14 @@ export class UserService {
 
   findOne(id:number){
     return this.http.get<User>( this.serverUrl + "users/"+ id);
+  }
+
+  getLogged() {
+    return this.isLogged
+  }
+
+  setLogged(input:boolean) {
+    this.isLogged = input;
   }
   
 }

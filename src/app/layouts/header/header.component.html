@@ -1,9 +1,8 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark">
     <div class="nav navbar-nav container-fluid">
-        <a class="nav-item nav-link active" routerLink="">Home </a>
-        <a class="nav-item nav-link" routerLink="/login">Login </a>
-        <a class="nav-item nav-link" routerLink="/register">Register </a>
-        <a class="nav-item nav-link" routerLink="/listusers">List Users</a>
+        <a class="nav-item nav-link" routerLink="" ng-if="!getLogged()">Home </a>
+        <a class="nav-item nav-link" routerLink="/login" ng-if="!getLogged()">Login </a>
+        <a class="nav-item nav-link" routerLink="/register" ng-if="!getLogged()">Register </a>
         <a class="nav-item nav-link" routerLink="/view-all-channels">All Channels</a>
     </div>
 </nav>

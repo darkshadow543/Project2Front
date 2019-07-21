@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
      console.log("Login:", this.email, this.password);
      this.userService.login(this.email, this.password).subscribe ( (res)=>{
        console.log(res);
-       this.router.navigate(['listusers']);
+       this.router.navigate(['home']);
      });
  
   }

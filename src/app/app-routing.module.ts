@@ -5,14 +5,17 @@ import { RegisterUserComponent } from './components/register-user/register-user.
 import { ListusersComponent } from './components/listusers/listusers.component';
 import { ViewUserComponent } from './components/view-user/view-user.component';
 import { ViewAllChannelsComponent } from './components/view-all-channels/view-all-channels.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 const routes: Routes = [
   {path:'login', component: LoginComponent},
+  {path:'home', component: HomeComponent},
   {path:'register', component:RegisterUserComponent},
   {path:'listusers', component:ListusersComponent},
   {path:'viewuser/:id', component:ViewUserComponent},
   {path:'view-all-channels', component:ViewAllChannelsComponent},
+  {path:'logout', component:LoginComponent},
   {path:'', redirectTo: 'login', pathMatch: 'full'}
 ];
 

@@ -27,7 +27,7 @@ export class ViewAllChannelsComponent implements OnInit {
   }
 
   subscribe(id:number){
-
+    
   }
 
 }

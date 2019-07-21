@@ -18,6 +18,7 @@ export class UserService {
   }
 
   register(user:User){
+    console.log("user service print out" + user);
     return this.http.post( this.serverUrl + 'users', user );
   }
 

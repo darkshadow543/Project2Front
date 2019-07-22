@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../models/user';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class UserService {
 
   serverUrl = "http://localhost:8090/"
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   list(){
     return this.http.get<User[]>(this.serverUrl + "users");
@@ -23,6 +24,10 @@ export class UserService {
   }
 
   login(email:string,password:string){
+    if(email == null || password == null){
+      console.log("You are not logged in");
+      this.router.navigate(['login']);
+    }
     let user = { "email": email, "password": password};
     return this.http.post(this.serverUrl + "users/login", user);
   }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Video } from 'src/app/models/video';
+import { VideoService } from 'src/app/services/video.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-upload-video',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UploadVideoComponent implements OnInit {
 
-  constructor() { }
+  video:Video = new Video();
+
+  constructor(private videoService: VideoService, private router: Router) { }
 
   ngOnInit() {
   }
 
+  Upload(){
+    this.videoService.upload(this.video).subscribe ( (res)=>{
+    console.log(res);
+    this.router.navigate(['home']);
+    });
+  }
 }

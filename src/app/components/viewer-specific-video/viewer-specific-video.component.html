@@ -1,1 +1,13 @@
-<p>viewer-specific-video works!</p>
+<h3>View Video</h3>
+<form>
+    Video name:
+    <input type="text" [(ngModel)] = "videoname" name="videoname"/>
+    <br/>
+
+    Description:
+    <input type="text" [(ngModel)] = "description" name="description"/>
+    
+    Release Date:
+    <input type="datetime" [(ngModel)] = "releaseDate" name="releaseDate" required />
+    <br/>
+</form>

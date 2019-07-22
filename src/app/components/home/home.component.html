@@ -1,1 +1,22 @@
-<p>home works!</p>
+<p>Home Page</p>
+
+<table class="table table-bordered">
+    <thead><tr><th>My Channels</th></tr></thead>
+    <tbody *ngFor="let channel of channels">
+        <tr>
+            <td>{{channel.name}}</td>
+            <td><button (click)= "goTo(channel.channelId)" class="btn btn-primary">Edit Channel</button></td>
+        </tr>
+    </tbody>
+</table>
+
+
+<table class="table table-bordered">
+    <thead><tr><th>My Subscriptions</th></tr></thead>
+    <tbody *ngFor="let channel of channels">
+        <tr>
+            <td>{{channel.name}}</td>
+            <td><button (click)= "goTo(channel.channelId)" class="btn btn-primary">Edit Channel</button></td>
+        </tr>
+    </tbody>
+</table>

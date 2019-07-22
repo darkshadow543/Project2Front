@@ -1,1 +1,17 @@
-<p>upload-video works!</p>
+<h3>Upload Video</h3>
+<form>
+
+    Video name:
+    <input type="text" [(ngModel)] = "videoname" name="videoname"/>
+    <br/>
+
+    Description:
+    <input type="text" [(ngModel)] = "description" name="description"/>
+    
+    Release Date:
+    <input type="datetime" [(ngModel)] = "releaseDate" name="releaseDate" required />
+    <br/>
+    <br/>
+    <button (click) = "Upload()" class="btn btn-success">Submit</button>
+
+</form>

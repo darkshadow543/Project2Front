@@ -10,7 +10,7 @@ import { Channel } from 'src/app/models/channel';
 })
 export class ViewAllChannelsComponent implements OnInit {
 
-
+  viewedChannel:Channel;
   constructor(private channelService: ChannelService, private router: Router) { }
 
   ngOnInit() {
@@ -24,6 +24,11 @@ export class ViewAllChannelsComponent implements OnInit {
       console.log(res);
       this.channels = res;
     });
+  }
+
+  goTo(id:number){
+    //this.viewedChannel = this.channelService.findOne(id);
+    this.router.navigate(['view-specific-channel']);
   }
 
   subscribe(id:number){

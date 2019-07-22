@@ -10,6 +10,10 @@ export class ChannelService {
 
   constructor(private http: HttpClient) { }
 
+  create(channel:Channel){
+    return this.http.post( this.serverUrl + 'channels', channel );
+  }
+
   list(){
     return this.http.get<Channel[]>(this.serverUrl + "channels");
   }

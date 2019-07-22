@@ -1,14 +1,21 @@
+<p>Home Page</p>
 
-<p>Home works!</p>
-
-<!-- <table class="table table-bordered" *ngIf="channel.owner =3">
-            
-    <thead><tr><th>Channel Name</th></tr></thead>
+<table class="table table-bordered">
+    <thead><tr><th>My Channels</th></tr></thead>
     <tbody *ngFor="let channel of channels">
         <tr>
-            <td>{{channel.id}}</td>
-            <td><button (click)= "view(channel.id)" class="btn btn-primary">View</button></td>
+            <td>{{channel.name}}</td>
+            <td><button (click)= "goTo(channel.channelId)" class="btn btn-primary">Edit Channel</button></td>
         </tr>
-
     </tbody>
-</table> -->
+</table>
+
+<table class="table table-bordered">
+    <thead><tr><th>My Subscriptions</th></tr></thead>
+    <tbody *ngFor="let channel of channels">
+        <tr>
+            <td>{{channel.name}}</td>
+            <td><button (click)= "goTo(channel.channelId)" class="btn btn-primary">Edit Channel</button></td>
+        </tr>
+    </tbody>
+</table>

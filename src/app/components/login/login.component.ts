@@ -25,7 +25,6 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-     console.log("Login:", this.email, this.password);
      this.userService.login(this.email, this.password).subscribe ( (res)=>{
        console.log(res);
     
@@ -48,6 +47,5 @@ export class LoginComponent implements OnInit {
          this.router.navigate(['login']);
        }
      });
- 
   }
 }

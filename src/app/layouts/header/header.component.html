@@ -1,19 +1,19 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-dark bg-dark">
   <ul class="nav">
     <li class="nav-item">
       <a class="nav-link active" routerLink="">Home</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/login" ng-if="!getLogged()">Login</a>
+    <li class="nav-item" ng-if="!getLogged()">
+      <a class="nav-link" routerLink="/login">Login</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/register" ng-if="!getLogged()">Register</a>
+    <li class="nav-item" ng-if="!getLogged()">
+      <a class="nav-link" routerLink="/register">Register</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" routerLink="/view-all-channels">All Channels</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/logout" ng-if="getLogged()">Logout</a>
+    <li class="nav-item" ng-if="getLogged()">
+      <a class="nav-link" routerLink="/logout" >Logout</a>
     </li>
   </ul>
 </nav>

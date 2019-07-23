@@ -1,5 +1,8 @@
+import { Video } from './video';
+
 export class Channel {
     id:number;
     owner:number;
-    Name:string;
+    name:string;
+    videos:Video[];
 }

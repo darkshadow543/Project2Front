@@ -25,9 +25,7 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-     this.userService.login(this.email, this.password).subscribe ( (res)=>{
-       console.log(res);
-    
+     this.userService.login(this.email, this.password).subscribe ( (res)=>{    
        let user = new User();
 
        let userObj = JSON.stringify(res);

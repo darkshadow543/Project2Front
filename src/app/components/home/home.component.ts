@@ -25,9 +25,8 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  // view(id:number){
-  //   this.router.navigate(['',id]);
-  // }
-
+  makeChannel(){
+    this.router.navigate(['make-channel']);
+  }
  
 }

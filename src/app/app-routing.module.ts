@@ -18,7 +18,7 @@ const routes: Routes = [
   {path:'view-all-channels', component:ViewAllChannelsComponent},
   {path:'logout', component:LoginComponent},
   {path:'', redirectTo: 'login', pathMatch: 'full'},
-  {path:'/viewer-specific-channe/:id', component:ViewerSpecificChannelComponent}
+  {path:'view-all-channels/viewer-specific-channel/:id', component:ViewerSpecificChannelComponent}
 ];
 
 @NgModule({

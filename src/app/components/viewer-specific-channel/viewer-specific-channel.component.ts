@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-viewer-specific-channel',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewerSpecificChannelComponent implements OnInit {
 
-  constructor() { }
+  id:number;
+  paramsub:any;
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+    this.paramsub = this.activatedRoute.params.subscribe(params => this.id = parseInt(params['id'], 10));
+  }
+
+  ngOnDestroy() {
+    this.paramsub.unsubscribe();
   }
 
 }

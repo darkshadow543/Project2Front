@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class UserService {
 
-  isLogged:boolean = false;
+  private loggedUser:User = null;
 
   serverUrl = "http://localhost:8090/"
 
@@ -40,12 +40,19 @@ export class UserService {
     return this.http.get<User>( this.serverUrl + "users/"+ id);
   }
 
-  getLogged() {
-    return this.isLogged
+  isLogged() {
+    if (this.loggedUser == null) {
+      return false
+    } else {
+      return true;
+    }
+  }
+  getUser() {
+    return this.loggedUser;
   }
 
-  setLogged(input:boolean) {
-    this.isLogged = input;
+  setUser(user:User) {
+    this.loggedUser = user;
   }
   
 }

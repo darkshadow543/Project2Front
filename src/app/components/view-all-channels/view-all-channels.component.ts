@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ChannelService } from 'src/app/services/channel.service';
 import { Channel } from 'src/app/models/channel';
-import { userInfo } from 'os';
-import { User } from 'src/app/models/user';
-import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-view-all-channels',
@@ -29,11 +26,4 @@ export class ViewAllChannelsComponent implements OnInit {
     });
   }
 
-<<<<<<< HEAD
-=======
-  subscribe(id:number){
-    
-  }
-
->>>>>>> 80b2ee37776f50605cfdff43f6ebfecb925c5b32
 }

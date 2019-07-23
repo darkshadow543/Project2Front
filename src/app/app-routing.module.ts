@@ -6,6 +6,7 @@ import { ListusersComponent } from './components/listusers/listusers.component';
 import { ViewUserComponent } from './components/view-user/view-user.component';
 import { ViewAllChannelsComponent } from './components/view-all-channels/view-all-channels.component';
 import { HomeComponent } from './components/home/home.component';
+import { ViewerSpecificChannelComponent } from './components/viewer-specific-channel/viewer-specific-channel.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path:'viewuser/:id', component:ViewUserComponent},
   {path:'view-all-channels', component:ViewAllChannelsComponent},
   {path:'logout', component:LoginComponent},
-  {path:'', redirectTo: 'login', pathMatch: 'full'}
+  {path:'', redirectTo: 'login', pathMatch: 'full'},
+  {path:'view-all-channels/viewer-specific-channel/:id', component:ViewerSpecificChannelComponent}
 ];
 
 @NgModule({

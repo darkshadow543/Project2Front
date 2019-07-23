@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ChannelService } from 'src/app/services/channel.service';
 import { Channel } from 'src/app/models/channel';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-view-all-channels',
@@ -11,7 +12,7 @@ import { Channel } from 'src/app/models/channel';
 export class ViewAllChannelsComponent implements OnInit {
 
   viewedChannel:Channel;
-  constructor(private channelService: ChannelService, private router: Router) { }
+  constructor(private channelService: ChannelService, private userService: UserService) { }
 
   ngOnInit() {
     this.list();
@@ -26,13 +27,7 @@ export class ViewAllChannelsComponent implements OnInit {
     });
   }
 
-  goTo(id:number){
-    //this.viewedChannel = this.channelService.findOne(id);
-    this.router.navigate(['view-specific-channel']);
+  subscribe(id:number) {
+    this.userService.subscribe(id);
   }
-
-  subscribe(id:number){
-    
-  }
-
 }

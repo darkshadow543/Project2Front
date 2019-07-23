@@ -1,1 +1,7 @@
-<p>make-channel works!</p>
+<h3>Make a Channel</h3>
+<form>
+    Channel Name :
+    <input type="text" [(ngModel)] = "channelName" name="ChannelName"/>
+    <br/>
+    <button (click) = "Create(channelName)" class="btn btn-success">Create</button>
+</form>

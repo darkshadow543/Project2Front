@@ -16,7 +16,6 @@ export class VideoService {
   }
 
   upload(video:Video){
-    console.log("user service print out" + video);
     return this.http.post( this.serverUrl + 'upload', video );
   }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-owner-specific-channel',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OwnerSpecificChannelComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  upload(){
+    this.router.navigate(['upload-video']);
+  }
 }

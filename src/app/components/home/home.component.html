@@ -1,21 +1,24 @@
 <p>Home Page</p>
 
 <table class="table table-bordered">
-    <thead><tr><th>My Channels</th></tr></thead>
+    <thead><tr><th>Channel Name</th></tr></thead>
     <tbody *ngFor="let channel of channels">
         <tr>
-            <td>{{channel.name}}</td>
-            <td><button (click)= "goTo(channel.channelId)" class="btn btn-primary">Edit Channel</button></td>
+            <td><a [routerLink]="['owner-specific-channel', channel.id]">{{channel.name}}</a></td>
         </tr>
     </tbody>
 </table>
+<br/>
+<button (click)= "makeChannel()" class="btn btn-primary">Make Channel</button>
+<br/>
+<br/>
+<br/>
 
 <table class="table table-bordered">
     <thead><tr><th>My Subscriptions</th></tr></thead>
     <tbody *ngFor="let channel of channels">
         <tr>
             <td>{{channel.name}}</td>
-            <td><button (click)= "goTo(channel.channelId)" class="btn btn-primary">Edit Channel</button></td>
         </tr>
     </tbody>
 </table>

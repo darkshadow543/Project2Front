@@ -1,1 +1,9 @@
-<p>viewer-specific-channel works!</p>
+<table class="table table-bordered">
+    <thead><tr><th>Video Name</th></tr></thead>
+    <tbody *ngFor="let vid of channel.videos">
+        <tr>
+            <td>{{vid.name}}</td>
+            <td>{{vid.releaseDate}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -37,7 +37,6 @@ export class LoginComponent implements OnInit {
        if(res != null) {
          console.log(user);
          console.log(sessionStorage.getItem('user'));
-         this.userService.setUser(user);
          this.invalidLogin = false;
          sessionStorage.setItem('userId', `${user.id}`);
          this.router.navigate(['home']);

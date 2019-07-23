@@ -2,7 +2,7 @@
 
 <table class="table table-bordered">
     <thead><tr><th>Channel Name</th></tr></thead>
-    <tbody *ngFor="let channel of channels">
+    <tbody *ngFor="let channel of user.channels">
         <tr>
             <td><a [routerLink]="['owner-specific-channel', channel.id]">{{channel.name}}</a></td>
         </tr>

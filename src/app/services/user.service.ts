@@ -50,7 +50,7 @@ export class UserService {
       return true;
     }
   }
-  getUser() {
+  getUser():User {
     return this.loggedUser;
   }
 

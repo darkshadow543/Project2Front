@@ -53,7 +53,6 @@ export class UserService {
 
   setUser(user:User) {
     this.loggedUser = user;
-    console.log("Set Gobal User")
   }
   
 }

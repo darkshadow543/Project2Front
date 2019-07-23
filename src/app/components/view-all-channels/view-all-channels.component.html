@@ -4,7 +4,7 @@
     <thead><tr><th>Channel Name</th></tr></thead>
     <tbody *ngFor="let channel of channels">
         <tr>
-            <td onclick="goTo(channel.channelId)">{{channel.name}}</td>
+            <td><a [routerLink]="['/viewer-specific-channel', channel.id]">{{channel.name}}</a></td>
             <td><button (click)= "subscribe(user.id)" class="btn btn-primary">Subscribe</button></td>
         </tr>
 

@@ -26,11 +26,6 @@ export class ViewAllChannelsComponent implements OnInit {
     });
   }
 
-  goTo(id:number){
-    //this.viewedChannel = this.channelService.findOne(id);
-    this.router.navigate(['view-specific-channel']);
-  }
-
   subscribe(id:number){
     
   }

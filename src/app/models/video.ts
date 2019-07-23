@@ -1,5 +1,5 @@
 export class Video {
-videoId:number;
+id:number;
 name:string;
 description:string;
 releaseDate:Date;

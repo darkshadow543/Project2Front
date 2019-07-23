@@ -29,4 +29,11 @@ export class ViewAllChannelsComponent implements OnInit {
     });
   }
 
+<<<<<<< HEAD
+=======
+  subscribe(id:number){
+    
+  }
+
+>>>>>>> 80b2ee37776f50605cfdff43f6ebfecb925c5b32
 }

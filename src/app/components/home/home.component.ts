@@ -15,18 +15,20 @@ export class HomeComponent implements OnInit {
   constructor(private userService:UserService, private channelService: ChannelService, private router: Router) { }
 
   ngOnInit() {
-    this.list();
     this.user = JSON.parse(sessionStorage.getItem('user'));
+    this.list();
+    console.log(this.user);
   }
   
-  channels: Channel[];
+  channels: Channel[] =[];
   user:User;
 
   list() {
-    this.channelService.list().subscribe((res) => {
-      //console.log(res);
-      this.channels = res;
-    });
+    for (let sub of this.user.subs) {
+      this.channelService.findOne(sub.channel).subscribe((res) => {
+        this.channels.push(res)
+      });
+    }
   }
 
   makeChannel(){

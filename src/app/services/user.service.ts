@@ -59,6 +59,7 @@ export class UserService {
   
   subscribe(channelId:number) {
     console.log("Subscribe:", channelId);
+    this.loggedUser = JSON.parse(sessionStorage.getItem('user'));
     let sub:Subscription = {"channel":channelId,"user": this.loggedUser.id};
   
     return this.http.post(this.serverUrl + "users/subscribe", sub);

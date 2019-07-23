@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../models/user';
 import { Router } from '@angular/router';
+import { Subscription } from '../models/subscription';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,8 @@ import { Router } from '@angular/router';
 export class UserService {
 
   private loggedUser:User = null;
+  private sub:Subscription = null;
+   
 
   serverUrl = "http://localhost:8090/"
 
@@ -55,4 +58,10 @@ export class UserService {
     this.loggedUser = user;
   }
   
+  subscribe(channelId:number) {
+    this.sub.channel = channelId;
+    this.sub.user = this.loggedUser.id;
+    return this.http.post(this.serverUrl + "users/subscribe", this.sub);
+  }
+
 }

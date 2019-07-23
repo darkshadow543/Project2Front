@@ -11,7 +11,7 @@ import { Channel } from 'src/app/models/channel';
 export class ViewAllChannelsComponent implements OnInit {
 
   viewedChannel:Channel;
-  constructor(private channelService: ChannelService, private userService, private router: Router) { }
+  constructor(private channelService: ChannelService) { }
 
   ngOnInit() {
     this.list();

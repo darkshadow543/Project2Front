@@ -26,14 +26,14 @@ export class LoginComponent implements OnInit {
 
   login(){
      this.userService.login(this.email, this.password).subscribe ( (res)=>{
-       console.log(res);
+      
     
-       let user = new User();
+      let user = new User();
 
-       let userObj = JSON.stringify(res);
-       sessionStorage.setItem('user', `${userObj}`)
-
-       console.log(user);
+      let userObj = JSON.stringify(res);
+      sessionStorage.setItem('user', `${userObj}`)
+       
+      console.log(user);
        if(res != null) {
          console.log(user);
          console.log(sessionStorage.getItem('user'));

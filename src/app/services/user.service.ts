@@ -11,7 +11,7 @@ export class UserService {
 
   private loggedUser:User = null;
   private sub:Subscription = null;
-   
+  
 
   serverUrl = "http://localhost:8090/"
 
@@ -59,6 +59,7 @@ export class UserService {
   }
   
   subscribe(channelId:number) {
+    this.sub.channel = 0;
     this.sub.channel = channelId;
     this.sub.user = this.loggedUser.id;
     return this.http.post(this.serverUrl + "users/subscribe", this.sub);
